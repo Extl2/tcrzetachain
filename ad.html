@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>医療ダイエットオンライン外来｜中央区オンライン診療｜初回3,300円〜（税込）</title>
+  <meta name="description" content="医師による医療ダイエットオンライン診療。中央区から全国対応。初回3,300円〜（税込）。LINEから予約・相談可能。" />
+
+  <style>
+    :root{
+      --bg:#fff9fc;
+      --bg2:#f4fbff;
+      --card:#ffffff;
+      --soft:#fff2f7;
+      --soft2:#eef8ff;
+      --text:#24324a;
+      --muted:#6f7f96;
+      --accent:#ff7fb1;
+      --accent2:#7ec8ff;
+      --accent3:#7de3c7;
+      --line:#06c755;
+      --line-dark:#05a847;
+      --danger:#ff6b6b;
+      --border:rgba(36,50,74,.10);
+      --shadow:0 12px 32px rgba(64,86,124,.12);
+      --radius:18px;
+      --radius2:28px;
+      --max:1120px;
+      --sale:#e94b72;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,"Hiragino Sans","Noto Sans JP","Segoe UI",sans-serif;
+      color:var(--text);
+      line-height:1.75;
+      background:
+        radial-gradient(900px 500px at 0% 0%, rgba(255,127,177,.16), transparent 60%),
+        radial-gradient(800px 460px at 100% 10%, rgba(126,200,255,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+
+    .nav{
+      position:sticky; top:0; z-index:30;
+      backdrop-filter:blur(12px);
+      background:rgba(255,255,255,.84);
+      border-bottom:1px solid var(--border);
+    }
+    .navin{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0;}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+    .logo{
+      width:42px; height:42px; border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 10px 24px rgba(126,200,255,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:before{
+      content:"";
+      position:absolute; inset:8px;
+      border-radius:10px;
+      background:linear-gradient(135deg, rgba(255,255,255,.75), rgba(255,255,255,.22));
+    }
+    .brand strong{font-size:14px; display:block; line-height:1.2; color:var(--text)}
+    .brand span{font-size:12px; color:var(--muted)}
+    .navbtns{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      text-decoration:none;
+      background:rgba(255,255,255,.9);
+      color:var(--text);
+      font-weight:800;
+      letter-spacing:.01em;
+      transition:transform .08s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+      white-space:nowrap;
+      box-shadow:0 6px 18px rgba(64,86,124,.06);
+    }
+    .btn:hover{transform:translateY(-1px); background:#fff; border-color:rgba(36,50,74,.16)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--line),#33d17a);
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 14px 28px rgba(6,199,85,.22);
+    }
+    .btn.primary:hover{background:linear-gradient(135deg,var(--line-dark),#24bf68)}
+    .btn.pastel{
+      background:linear-gradient(135deg,#fff2f7,#eef8ff);
+      color:var(--text);
+    }
+    .btn.heroCta{
+      padding:15px 24px;
+      font-size:18px;
+      box-shadow:0 18px 34px rgba(6,199,85,.24);
+    }
+
+    header.hero{padding:30px 0 14px;}
+    .heroGrid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .heroCard, .card{
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--border);
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .heroCard{padding:28px; position:relative;}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#fff4f8,#eff8ff);
+      color:#56677f;
+      font-size:12px; font-weight:800;
+      border:1px solid var(--border);
+      margin-bottom:12px;
+    }
+    h1{margin:0 0 10px; font-size:38px; line-height:1.16; letter-spacing:-.02em;}
+    .lead{color:var(--muted); margin:0 0 16px; font-size:15px;}
+
+    .heroTopPrice{
+      margin:14px 0 14px;
+      padding:18px 18px 16px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#fff2f7 0%, #fff 40%, #eef8ff 100%);
+      border:1px solid rgba(233,75,114,.14);
+      box-shadow:0 12px 28px rgba(233,75,114,.10);
+    }
+    .heroTopPrice .cap{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      color:#8e5871;
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(233,75,114,.12);
+      border-radius:999px;
+      padding:6px 10px;
+      margin-bottom:8px;
+    }
+    .heroTopPrice .big{
+      font-size:34px;
+      line-height:1.2;
+      font-weight:900;
+      color:var(--sale);
+      letter-spacing:-.02em;
+    }
+    .heroTopPrice .sub{
+      margin-top:6px;
+      font-size:14px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .priceRow{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 18px;}
+    .priceBox{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg,#fff,#fff7fb);
+      border-radius:20px;
+      padding:16px;
+    }
+    .priceBox small{display:block; color:var(--muted); font-weight:800}
+    .priceBox b{display:block; font-size:24px; margin-top:4px; line-height:1.35;}
+    .priceBox .note{font-size:12px; color:var(--muted); margin-top:4px;}
+
+    .kpis{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
+    .kpi{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .heroButtons{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;}
+    .mini{font-size:12px; color:var(--muted);}
+
+    .sideCard{padding:22px; display:flex; flex-direction:column; justify-content:space-between;}
+    .sideCard h2{margin:0 0 12px; font-size:18px;}
+    .list{margin:0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+    .warn{
+      border-left:4px solid var(--danger);
+      background:#fff4f4;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,107,107,.18);
+      color:var(--text);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:12px; font-weight:800; color:var(--muted);
+    }
+
+    .heroVisual{
+      margin-top:16px;
+      border:1px solid var(--border);
+      border-radius:22px;
+      background:linear-gradient(135deg,#fff7fb 0%, #eef8ff 100%);
+      padding:18px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:12px;
+      align-items:center;
+    }
+    .illustration{
+      min-height:260px;
+      border-radius:22px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.95) 0 10%, transparent 11%),
+        radial-gradient(circle at 70% 18%, rgba(255,255,255,.9) 0 8%, transparent 9%),
+        linear-gradient(180deg,#ffdceb 0%,#f7fbff 56%,#eefbf6 100%);
+      position:relative;
+      overflow:hidden;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);
+    }
+    .illustration .bubble{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,.52);
+      filter:blur(1px);
+    }
+    .bubble.b1{width:90px;height:90px;left:-12px;top:24px}
+    .bubble.b2{width:58px;height:58px;right:16px;top:30px}
+    .bubble.b3{width:120px;height:120px;right:-25px;bottom:-20px}
+    .woman{
+      position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+      width:180px; height:230px;
+    }
+    .hair{position:absolute; width:116px; height:120px; left:32px; top:18px; background:#5b4a48; border-radius:58px 58px 46px 46px;}
+    .face{position:absolute; width:82px; height:92px; left:49px; top:34px; background:#ffe4d6; border-radius:42px; z-index:2;}
+    .body{position:absolute; width:150px; height:118px; left:15px; top:106px; background:#ffffff; border-radius:40px 40px 18px 18px; border:1px solid rgba(36,50,74,.06);}
+    .arm{position:absolute; width:66px; height:18px; background:#ffe4d6; border-radius:12px; top:136px; left:110px; transform:rotate(-18deg); z-index:3;}
+    .pen{position:absolute; width:44px; height:10px; background:linear-gradient(90deg,#46c8ff,#7ce4c7); border-radius:10px; top:122px; left:140px; transform:rotate(-20deg); z-index:4; box-shadow:0 2px 8px rgba(70,200,255,.25);}
+    .eye,.eye2{position:absolute; width:7px; height:7px; background:#4c5a6e; border-radius:50%; top:67px; z-index:3;}
+    .eye{left:72px}.eye2{left:102px}
+    .smile{position:absolute; width:28px; height:14px; border-bottom:3px solid #dd8792; border-radius:0 0 20px 20px; left:77px; top:88px; z-index:3;}
+    .cheek,.cheek2{position:absolute; width:10px;height:10px;border-radius:50%; background:rgba(255,148,170,.45); top:84px; z-index:2;}
+    .cheek{left:60px}.cheek2{left:112px}
+    .sparkle, .sparkle2, .sparkle3{
+      position:absolute; color:#fff; font-size:18px; font-weight:900; text-shadow:0 2px 10px rgba(255,255,255,.6);
+    }
+    .sparkle{left:20px; top:20px}
+    .sparkle2{right:20px; top:68px}
+    .sparkle3{left:22px; bottom:34px}
+    .heroInfo{
+      display:grid; gap:10px;
+    }
+    .infoCard{
+      border-radius:18px;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:14px;
+    }
+    .infoCard strong{display:block; margin-bottom:4px; font-size:14px}
+    .infoCard span{color:var(--muted); font-size:13px}
+
+    section{padding:18px 0}
+    .sectionTitle{margin:0 0 12px; font-size:28px; line-height:1.3;}
+    .sectionLead{margin:0 0 18px; color:var(--muted)}
+
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+    .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+    .card{padding:20px; border-radius:22px;}
+    .card h3{margin:0 0 8px; font-size:18px}
+    .muted{color:var(--muted)}
+
+    .featureIcon{
+      width:52px; height:52px; border-radius:16px;
+      display:grid; place-items:center;
+      background:linear-gradient(135deg,#fff2f7,#eef8ff);
+      margin-bottom:10px; font-size:24px;
+    }
+
+    .steps{counter-reset:step;}
+    .step{position:relative; padding-left:46px; min-height:38px;}
+    .step:before{
+      counter-increment:step;
+      content:counter(step);
+      position:absolute; left:0; top:0;
+      width:32px; height:32px;
+      border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#fff; font-weight:900;
+      box-shadow:0 8px 16px rgba(126,200,255,.25);
+    }
+
+    .faq details{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:16px;
+      padding:12px 14px;
+      margin:10px 0;
+    }
+    .faq summary{cursor:pointer; font-weight:800;}
+
+    .ctaPanel{
+      background:linear-gradient(135deg,#fff1f7 0%, #eef8ff 100%);
+      border:1px solid var(--border);
+      border-radius:26px;
+      padding:22px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:16px;
+      align-items:center;
+    }
+    .ctaText h3{margin:0 0 8px; font-size:28px; line-height:1.28}
+    .ctaText p{margin:0 0 14px; color:var(--muted)}
+
+    .foot{
+      padding:26px 0 120px;
+      color:var(--muted);
+      border-top:1px solid var(--border);
+      margin-top:22px;
+    }
+
+    .tokushoLink{
+      text-align:center;
+      margin-top:18px;
+    }
+    .tokushoLink a{
+      color:var(--muted);
+      text-decoration:underline;
+    }
+
+    .ctaBar{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      background:rgba(255,255,255,.88);
+      border-top:1px solid var(--border);
+      backdrop-filter:blur(10px);
+      padding:10px 0;
+      z-index:40;
+    }
+    .ctaIn{display:flex; gap:10px; align-items:center; justify-content:space-between;}
+    .ctaIn .txt{font-weight:900; font-size:13px;}
+    .ctaIn .sub{font-size:12px; color:var(--muted); margin-top:2px;}
+    .ctaIn .left{display:flex; flex-direction:column;}
+    .anchor{position:relative; top:-80px;}
+
+
+    .heroAssure{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin:14px 0 10px;
+    }
+    .heroAssure .item{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px 10px;
+      text-align:center;
+      font-size:13px;
+      font-weight:800;
+      color:#42526a;
+      box-shadow:0 6px 18px rgba(64,86,124,.05);
+    }
+    .microTrust{
+      margin-top:12px;
+      display:grid;
+      gap:6px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+    .consultBox{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:linear-gradient(135deg,#f7fff9,#ffffff 55%,#f2fbff);
+      border:1px solid rgba(6,199,85,.15);
+    }
+    .consultTitle{
+      font-size:14px;
+      font-weight:900;
+      color:#22415b;
+      margin-bottom:8px;
+    }
+    .consultList{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .consultList span{
+      display:inline-flex;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--border);
+      font-size:12px;
+      font-weight:800;
+      color:#4a5a72;
+    }
+    .sectionBand{
+      margin:0 0 14px;
+      padding:14px 16px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#fff6fa,#f5fbff);
+      border:1px solid var(--border);
+    }
+    .sectionBand strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:15px;
+    }
+
+    @media (max-width: 920px){
+      .heroGrid,.grid3,.grid2,.ctaPanel,.heroVisual,.heroAssure{grid-template-columns:1fr}
+      h1{font-size:30px}
+      .heroTopPrice .big{font-size:30px}
+      .priceRow{grid-template-columns:1fr}
+      .navbtns .btn{padding:10px 12px; font-size:13px}
+      .ctaIn{align-items:flex-start; flex-direction:column}
+      .btn.heroCta{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>医療ダイエットオンライン外来｜中央区オンライン診療</strong>
+          <span>医師によるオンライン診療｜LINE予約対応</span>
+        </div>
+      </a>
+      <div class="navbtns">
+        <a class="btn pastel" href="#price">料金</a>
+        <a class="btn pastel" href="#flow">流れ</a>
+        <a class="btn pastel" href="#faq">FAQ</a>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'header_line'});">LINEで空き状況を確認する</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="wrap heroGrid">
+      <div class="heroCard">
+        <div class="badge">✨ 来院不要・完全オンライン診療 / LINE予約対応</div>
+        <h1>医療ダイエットを<br>オンライン診療で相談</h1>
+
+        <div class="heroTopPrice">
+          <div class="cap">人気の開始プラン</div>
+          <div class="big">初回 3,300円〜</div>
+          <div class="sub">税込 / オンライン診療 / LINE予約が最短</div>
+        </div>
+
+        <div class="heroAssure">
+          <div class="item">医師が診察</div>
+          <div class="item">医師が診療</div>
+          <div class="item">来院不要</div>
+          <div class="item">来院不要</div>
+        </div>
+
+        <div class="heroButtons heroButtonsTop" style="margin-top:0;">
+  <a class="btn primary heroCta"
+     href="https://lin.ee/nSBG5aT"
+     target="_blank"
+     rel="noopener"
+     onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_main_line'});">
+    LINEで空き状況を確認する
+  </a>
+
+  <a class="btn" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_sub_line'});">LINEでオンライン診療を予約する</a>
+
+</div>
+
+        <div class="microTrust">
+          <div>※ 友だち追加後、すぐに予約案内をご確認いただけます</div>
+          <div>※ まずは空き状況の確認やご相談のみでも可能です</div>
+          <div>※ 不要な場合はブロック可能です</div>
+        </div>
+
+        <p class="lead" style="margin-top:14px;">
+          医師が診察し、適応や注意事項を確認のうえ診療方針をご案内します。
+        </p>
+
+        <div class="priceRow" id="price">
+          <div class="priceBox">
+            <small>人気の開始プラン</small>
+            <b>初回 3,300円〜<br>（税込）</b>
+            <div class="note">まずは相談したい方にも選ばれています</div>
+          </div>
+          <div class="priceBox">
+            <small>継続をご検討の方に</small>
+            <b>継続プラン 5,175円〜<br>（税込）</b>
+            <div class="note">内容は診察後にご案内します</div>
+          </div>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi">医師が診察</div>
+          <div class="kpi">診察5分目安</div>
+          <div class="kpi">来院不要</div>
+          <div class="kpi">LINE予約が最短</div>
+        </div>
+
+        <div class="heroButtons">
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'hero_line'});">LINEで空き状況を確認する</a>
+          <a class="btn" href="#faq">よくある質問を見る</a>
+        </div>
+
+        <p class="mini" style="margin-top:12px;">
+          ※ 自由診療です。保険診療ではありません。未成年の方はお受けできません。
+        </p>
+
+        <div class="consultBox">
+          <div class="consultTitle">こんな方は、まずLINEでご相談ください</div>
+          <div class="consultList">
+            <span>初めてで不安</span>
+            <span>副作用が心配</span>
+            <span>自分が適応か知りたい</span>
+            <span>料金を確認してから決めたい</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroCard sideCard">
+        <div>
+          <h2>このような方におすすめ</h2>
+          <ul class="list">
+            <li>通院せずに医療ダイエットを始めたい</li>
+            <li>継続しやすい価格帯で相談したい</li>
+            <li>医療ダイエットが初めてで不安</li>
+            <li>医師の説明を受けて無理なく進めたい</li>
+          </ul>
+        </div>
+
+        <div class="heroVisual" aria-hidden="true">
+          <div class="illustration">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+            <div class="sparkle">✦</div>
+            <div class="sparkle2">✦</div>
+            <div class="sparkle3">✦</div>
+            <div class="woman">
+              <div class="hair"></div>
+              <div class="face"></div>
+              <div class="eye"></div>
+              <div class="eye2"></div>
+              <div class="smile"></div>
+              <div class="cheek"></div>
+              <div class="cheek2"></div>
+              <div class="body"></div>
+              <div class="arm"></div>
+              <div class="pen"></div>
+            </div>
+          </div>
+          <div class="heroInfo">
+            <div class="infoCard">
+              <strong>📱 予約しやすい</strong>
+              <span>LINEからそのまま相談・予約へ進めます。</span>
+            </div>
+            <div class="infoCard">
+              <strong>🩺 医師が診察</strong>
+              <span>適応や副作用を確認のうえ案内します。</span>
+            </div>
+            <div class="infoCard">
+              <strong>🚚 ご自宅へ配送</strong>
+              <span>オンラインで相談から予約まで進められます。</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+        <div class="warn">
+          <strong>重要：</strong> 妊娠中・授乳中の方、治療中の疾患がある方などは内容をご案内できない場合があります。診察で医師が判断します。
+        </div>
+
+        <div style="height:14px"></div>
+        <div class="pill">オンライン診療 / 医療ダイエット / 中央区 / LINE予約</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section>
+    <div class="wrap">
+      <div class="card" style="margin-bottom:14px;">
+        <h2 class="sectionTitle">内科専門医が丁寧に説明します</h2>
+        <p class="sectionLead">担当医：グランエタニティ銀座クリニック　医師　津坂憲政（慶応大学出身、内科専門医）</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="featureIcon">💰</div>
+          <h3>価格が明確</h3>
+          <p class="muted">初回3,300円〜、継続5,175円〜。税込の目安料金です。</p>
+        </div>
+        <div class="card">
+          <div class="featureIcon">💻</div>
+          <h3>オンラインで完結</h3>
+          <p class="muted">LINE予約 → 事前問診 → ビデオ診察 → ご案内。来院不要で進められます。</p>
+        </div>
+        <div class="card">
+          <div class="featureIcon">🩺</div>
+          <h3>医師が診療</h3>
+          <p class="muted">問診内容や注意事項を確認し、診療録を作成のうえご案内します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow">
+    <div class="wrap">
+      <div class="anchor"></div>
+      <div class="card">
+        <h2 class="sectionTitle">オンライン診療の流れ</h2>
+
+        <div class="sectionBand"><strong>予約前の相談だけでも可能です</strong><span class="muted">まずはLINEで空き枠・料金・流れをご確認ください。納得してから予約へ進めます。</span></div>
+
+        <div class="grid2" style="margin-top:12px;">
+          <div class="steps">
+            <div class="step">
+              <div><strong>LINEで予約</strong></div>
+              <div class="muted">予約ボタンから友だち追加 → 希望日時を選択。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>事前問診に回答</strong></div>
+              <div class="muted">身長・体重・既往歴・服薬状況などを入力。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>オンライン診察（5分目安）</strong></div>
+              <div class="muted">本人確認、診療内容の確認、注意事項の説明、同意取得。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>決済</strong></div>
+              <div class="muted">クレジットカード等。</div>
+            </div>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div><strong>診療後のご案内</strong></div>
+              <div class="muted">診察内容に応じて必要なご案内を行います。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>ご自宅で確認</strong></div>
+              <div class="muted">案内内容はLINEでもご確認いただけます。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>フォロー</strong></div>
+              <div class="muted">体調変化や不安な点はLINEでご相談いただけます。</div>
+            </div>
+            <div style="height:10px"></div>
+            <div class="step">
+              <div><strong>継続相談</strong></div>
+              <div class="muted">次回もオンラインで相談可能です。内容は診察で判断します。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroButtons">
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'flow_line'});">LINEで空き状況を確認する</a>
+          <a class="btn" href="#faq">よくある質問へ</a>
+        </div>
+
+        <p class="mini" style="margin-top:10px;">
+          ※ 診療内容やご案内時期は、予約状況により異なります。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section>
+    <div class="wrap grid2">
+      <div class="card">
+        <h2 class="sectionTitle">料金</h2>
+        <p class="sectionLead">表示価格は税込の目安です。詳細はLINEでご確認ください。</p>
+
+        <div class="priceBox" style="margin-top:10px;">
+          <small>初回プラン</small>
+          <b>13,200円 / 1ヶ月目安</b>
+          <b>26,400円 / 2ヶ月目安</b>
+          <b>39,600円 / 3ヶ月目安</b>
+          <b>52,800円 / 4ヶ月目安</b>
+        </div>
+
+        <div class="priceBox" style="margin-top:10px;">
+          <small>継続プラン</small>
+          <b>20,700円 / 1ヶ月目安</b>
+          <b>41,400円 / 2ヶ月目安</b>
+          <b>62,100円 / 3ヶ月目安</b>
+          <b>82,800円 / 4ヶ月目安</b>
+        </div>
+
+        <div class="priceBox" style="margin-top:10px;">
+          <small>ご案内</small>
+          <b>詳細はLINEでご確認ください</b>
+          <div class="note">診療内容やご案内方法は個別に異なります</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="sectionTitle">安全のための確認事項</h2>
+        <ul class="list">
+          <li>医師が診察し、禁忌・リスクを確認します</li>
+          <li>注意事項や想定される体調変化について説明します</li>
+          <li>体調に異変がある場合は使用を中止し、すぐご相談ください</li>
+          <li>初診の場合、診療内容は診察で判断します（ご希望に沿えない場合があります）</li>
+        </ul>
+        <p class="mini" style="margin-top:10px;">
+          ※ 本ページは一般的な案内です。診療行為は医師の診察と判断に基づきます。
+        </p>
+        <div class="warn" style="margin-top:14px;">
+          <strong>ご確認ください：</strong><br>
+          体調や既往歴によっては案内できない場合があります。副作用や注意点は診察時に必ずご説明します。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section style="padding:60px 20px;background:#f9fcff;">
+    <div style="max-width:1000px;margin:auto;">
+      <h2 style="text-align:center;font-size:28px;margin-bottom:40px;">患者様の口コミ</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>オンライン診療がとても簡単でした。LINE予約してすぐ相談でき、流れも分かりやすかったです。</p>
+          <b>30代女性</b>
+        </div>
+
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>料金が分かりやすかったので利用しました。説明も丁寧で安心できました。</p>
+          <b>40代女性</b>
+        </div>
+
+        <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+          ★★★★★
+          <p>通院不要で相談できるのが便利。仕事が忙しいのでオンライン診療は助かります。</p>
+          <b>30代男性</b>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:28px;">
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'review_line'});">LINEで空き状況を確認する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="anchor"></div>
+      <div class="card">
+        <h2 class="sectionTitle">よくある質問</h2>
+
+        <details>
+          <summary>来院は必要ですか？</summary>
+          <div class="muted">必要ありません。スマートフォンでオンライン診察を行い、診療後の流れは個別にご案内します。</div>
+        </details>
+
+        <details>
+          <summary>どれくらいで届きますか？</summary>
+          <div class="muted">診療内容や予約状況により異なります。詳細はLINEでご案内します。</div>
+        </details>
+
+        <details>
+          <summary>診察時間はどれくらいですか？</summary>
+          <div class="muted">目安は5分程度です（初回は確認項目が多くなるため長くなる場合があります）。</div>
+        </details>
+
+        <details>
+          <summary>支払い方法は？</summary>
+          <div class="muted">クレジットカード等に対応しています（運用に合わせて記載を変更してください）。</div>
+        </details>
+
+        <details>
+          <summary>薬は本物ですか？</summary>
+          <div class="muted">当院では医師の診察のもと、安全面に配慮してご案内します。</div>
+        </details>
+
+        <details>
+          <summary>キャンセルできますか？</summary>
+          <div class="muted">診察前のキャンセルは可能です。診察後・決済後のキャンセル／返金は原則できません。詳細は運用規約に従います。</div>
+        </details>
+
+        <section style="padding:40px 20px; display:none;">
+          <div style="max-width:1000px;margin:auto;">
+            <h2>医療ダイエットについて詳しく知りたい方へ</h2>
+            <ul>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-online.html">医療ダイエットオンライン診療とは？価格・案内方法・注意点を解説</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-yasui.html">医療ダイエットを安く始めたい方へ｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/glp1-online.html">医療ダイエットオンライン診療とは？｜価格の見方・オンライン診療の選び方</a></li>
+              <li><a href="https://extl2.github.io/manjyaro_online/mounjaro-hikaku.html">医療ダイエット価格比較</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="heroButtons" style="margin-top:14px;">
+          <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'faq_line'});">LINEで空き状況を確認する</a>
+          <a class="btn" href="#clinic">クリニック情報へ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA PANEL -->
+  <section>
+    <div class="wrap">
+      <div class="ctaPanel">
+        <div class="ctaText">
+          <h3>まずはLINEで、空き状況をご確認ください</h3>
+          <p>料金や流れを確認したうえで、そのままLINEで予約へ進めます。</p>
+          <div class="heroButtons">
+            <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'cta_line'});">LINEで空き状況を確認する</a>
+            <a class="btn" href="#price">料金を見る</a>
+          </div>
+        </div>
+        <div class="heroVisual" aria-hidden="true" style="margin-top:0;">
+          <div class="illustration">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+            <div class="sparkle">✦</div>
+            <div class="sparkle2">✦</div>
+            <div class="sparkle3">✦</div>
+            <div class="woman">
+              <div class="hair"></div>
+              <div class="face"></div>
+              <div class="eye"></div>
+              <div class="eye2"></div>
+              <div class="smile"></div>
+              <div class="cheek"></div>
+              <div class="cheek2"></div>
+              <div class="body"></div>
+              <div class="arm"></div>
+              <div class="pen"></div>
+            </div>
+          </div>
+          <div class="heroInfo">
+            <div class="infoCard"><strong>🌸 お気軽にどうぞ</strong><span>ご不明点があれば、LINEでお尋ねください。</span></div>
+            <div class="infoCard"><strong>✅ いつでもどうぞ</strong><span>24時間LINEで対応いたします。</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINIC INFO -->
+  <section id="clinic">
+    <div class="wrap">
+      <div class="anchor"></div>
+      <div class="card">
+        <h2 class="sectionTitle">クリニック情報</h2>
+        <div class="grid2" style="margin-top:10px;">
+          <div>
+            <ul class="list">
+              <li><strong>名称：</strong>医療ダイエットオンライン外来｜中央区オンライン診療</li>
+              <li><strong>所在地：</strong>東京都中央区銀座1-20-14 グランエタニティ銀座クリニック</li>
+              <li><strong>診療形態：</strong>オンライン診療（自由診療）</li>
+              <li><strong>問い合わせ：</strong>03-3528-6320</li>
+              <li><strong>診療時間（オンライン含む）：</strong> 平日・土・日　8:00〜23:00</li>
+            </ul>
+          </div>
+          <div>
+            <div class="warn">
+              <strong>免責・注意事項：</strong><br>
+              ・本サービスは自由診療です。<br>
+              ・効果には個人差があります。<br>
+              ・医師の判断により案内できない場合があります。<br>
+              ・副作用が疑われる場合は使用を中止し、医療機関を受診してください。<br>
+              ・定期的に血液検査を受けることをお勧めします。<br>
+              ・緊急時は救急（119）または最寄り医療機関へ。
+            </div>
+          </div>
+        </div>
+        <p class="mini" style="margin-top:12px;">
+          ※ 本ページは広告表現の誇大表示にならないよう、効果の断定・保証表現は避けています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL ETERNITY誘導 -->
+  <section style="padding:50px 20px;background:#fffaf7;">
+    <div style="max-width:900px;margin:auto;padding:35px;border-radius:16px;border:1px solid #eadfd7;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center;">
+      <h2 style="font-size:26px;margin-bottom:18px;">
+        ダイエットとあわせて<br>
+        美容ケアも気になる方へ
+      </h2>
+
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:16px;">
+        医療ダイエットによる体重管理をきっかけに、<br>
+        肌のコンディションや美容ケアについてご相談をいただくことがあります。
+      </p>
+
+      <p style="font-size:16px;line-height:1.9;color:#444;margin-bottom:24px;">
+        当院ではスキンケアをご希望の方へ、<br>
+        <strong>幹細胞上清液美容液「FULL ETERNITY」</strong>もご案内しています。
+      </p>
+
+      <a href="https://extl2.github.io/mounjaro_flow/full_eternity2_lp.html"
+         style="display:inline-block;padding:16px 36px;border-radius:999px;background:#b3875a;color:white;text-decoration:none;font-weight:bold;font-size:18px;">
+        FULL ETERNITYを見る
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="wrap foot">
+    <div class="mini">
+      © <span id="y"></span> 医療ダイエットオンライン外来｜中央区オンライン診療
+    </div>
+    <div class="tokushoLink">
+      <a href="tokusho.html">特定商取引法に基づく表示</a>
+    </div>
+  </div>
+
+  <!-- Sticky CTA -->
+  <div class="ctaBar" role="region" aria-label="予約CTA">
+    <div class="wrap ctaIn">
+      <div class="left">
+        <div class="txt">初回 3,300円〜（税込）</div>
+        <div class="sub">完全オンライン診療・ご相談のみでもOK</div>
+      </div>
+      <div>
+        <a class="btn primary" href="https://lin.ee/nSBG5aT" target="_blank" rel="noopener" onclick="gtag('event','line_click',{event_category:'conversion',event_label:'sticky_line'});">LINEで空き状況を確認する</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
